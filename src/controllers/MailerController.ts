@@ -29,7 +29,7 @@ class MailerController extends Controller {
         this.initMailer(request.smtp_username, request.smtp_password)
 
         await this.Mail.sendMail({
-            from: request.smtp_username,
+            from: request.from,
             to: request.to,
             subject: request.subject,
             html: request.body
