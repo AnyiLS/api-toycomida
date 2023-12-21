@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    image: nodeimage
+    container_name: api_toycomida
+    build: ./dist
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3000
